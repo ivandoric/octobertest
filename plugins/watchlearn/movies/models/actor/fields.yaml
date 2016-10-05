@@ -1,0 +1,11 @@
+fields:
+    name:
+        label: 'First name'
+        oc.commentPosition: ''
+        span: left
+        type: text
+    lastname:
+        label: 'Last name'
+        span: right
+        oc.commentPosition: ''
+        type: text

@@ -1,0 +1,16 @@
+1.0.1: First version of BlogTags
+1.0.2:
+    - create tags table
+    - create posts tags table
+    - create_tags_table.php
+1.0.3:
+    - Improve styling
+    - Fix saving empty tags (Thanks to Vojta Svoboda)
+1.0.4:
+    - Fix can't uninstall the plugin
+1.0.5:
+    - Fix can't load tag list if installed OctoberCMS in subdirectory
+1.0.6:
+    - Fix don't load tagbox when export/import
+1.0.7:
+    - Fix error if there is no associated tag to blog post

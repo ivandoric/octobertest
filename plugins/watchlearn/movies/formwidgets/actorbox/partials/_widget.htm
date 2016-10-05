@@ -1,0 +1,44 @@
+<style type="text/css">
+    .select2-container{
+        width:100% !important;
+        display: block;
+    }
+</style>
+
+
+
+<select class="s2" multiple >
+    <?php foreach($this->vars['actors'] as $key => $value): ?>
+        <option value="<?php echo $key ?>"><?php echo $value ?></option>
+    <?php endforeach; ?>
+</select>
+
+
+<?php /*
+<select
+    id="<?= $field->getId() ?>"
+    name="<?= $field->getName() ?>[]"
+    class="form-control custom-select select-hide-selected"
+    multiple
+    <?= $field->getAttributes() ?>>
+    <?php foreach ($availableOptions as $option): ?>
+        <?php if (!strlen($option)) continue ?>
+        <option value="<?= e($option) ?>" <?= in_array($option, $selectedValues) ? 'selected="selected"' : '' ?>><?= e(trans($option)) ?></option>
+    <?php endforeach ?>
+</select>
+*/?>
+<?php 
+    $actors = [1,2,3];
+?>
+<input type="hidden" name='Movie[actors][]' class="tagbox" value="1,2,3">
+
+<script type="text/javascript">
+$(document).on('render', function() {
+    $('.s2').select2({
+        placeholder: 'Add actors',
+        tags: true
+    });
+});
+
+</script>
+
